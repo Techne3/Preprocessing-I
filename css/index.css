@@ -106,7 +106,8 @@ section {
 }
 body {
   line-height: 1;
-  margin: 0 40px;
+  margin: 0 70px;
+  font-size: 10px;
 }
 ol,
 ul {
@@ -147,14 +148,72 @@ nav a {
   margin-top: 30px;
   margin-right: 70px;
   text-decoration: none;
-  color: #000;
+  color: #303030;
+  font-size: 1.2rem;
 }
 header .main-container {
-  height: 60vh;
-  background-color: beige;
+  height: 90%;
+  background-color: #d3edf7;
   width: 100%;
+  margin-bottom: 30px;
 }
 header .main-container img {
-  height: 40vh;
-  width: 40vw;
+  margin-left: 60px;
+  margin-top: 60px;
+  height: 65vh;
+  width: 50vw;
+}
+header .main-container h1 {
+  margin-left: 50px;
+  font-size: 4rem;
+  margin-top: 30px;
+  color: #303030;
+}
+@media screen and (max-width: 800px) {
+  header .main-container h1 {
+    font-size: 2rem;
+  }
+}
+header .main-container p {
+  margin: 30px 50px;
+  font-size: 1.2rem;
+  color: #303030;
+  line-height: 1.4;
+}
+header .main-container button {
+  margin: 0 40px 100px;
+  padding: 10px 30px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  background-color: grey;
+  color: #fff;
+}
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #303030;
+}
+.skills .left-skills,
+.skills .right-skills {
+  width: 48%;
+}
+.skills .left-skills h2 {
+  font-size: 2rem;
+}
+.skills .left-skills p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+.skills .right-skills ul {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  text-align: left;
+}
+.skills .right-skills ul h2 {
+  font-size: 1.2rem;
+  color: red;
+}
+.skills .right-skills li {
+  border: 1px solid #303030;
 }
