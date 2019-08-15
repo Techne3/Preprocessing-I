@@ -65,6 +65,7 @@ html, body {
 @main-color: rgb(211, 237, 247);
 @text-color:rgb(48, 48, 48);
 @line-height:1.4;
+@font:1.2rem;
 // mixin 
 .border(){
 	border:1px solid @text-color;
@@ -74,12 +75,15 @@ html, body {
 	display:flex;
 	justify-content:center;
 	align-items:center;
+
+
   }
 
   nav{
 	  .centerFlex();
 	  justify-content: flex-end;
 	  margin-bottom: 40px;
+	 
 	  a{
 		margin-left: 10px;
 		margin-top: 30px;
@@ -87,7 +91,9 @@ html, body {
 		text-decoration: none;
 		color:@text-color;
 		font-size: 1.2rem;
-
+		@media screen and (max-width:520px){
+			margin-right:20px;
+		}//media query
 	 }//a end;
   }//nav end
  
@@ -113,7 +119,7 @@ header .main-container{
 		margin-top: 30px;
 		color:@text-color;
 			@media screen and (max-width:800px){
-			font-size: 2rem;
+			font-size: 1.6rem;
 		}//media query
 	}//h1
 		p{	
@@ -129,6 +135,10 @@ header .main-container{
 		border-radius: 5px;
 		background-color: grey;
 		color:#fff;
+			@media screen and (max-width:520px){
+				margin-left:25%;
+				text-align: center;
+			}
 	}
 }//head main
 
@@ -137,28 +147,93 @@ header .main-container{
 .skills{
 	.centerFlex();
 	color:@text-color;
+		@media screen and (max-width:520px){
+			flex-direction: column;
+			width:100%;
+		}
 	.left-skills, .right-skills{
 		width:48%;
+		@media screen and (max-width:520px){
+			width:100%;
+			margin-bottom: 20px;
+		}
 	}
-	.left-skills h2{
+}
+//left side///////
+	.left-skills {
+		h2{
 		font-size: 2rem;
-	}
-		.left-skills p{
-		font-size: 1.2rem;
+		}
+		p{
+		font-size:@font;
 		line-height: @line-height;
-		
+		margin-right:20px;
 		}
-		.right-skills ul{
-			font-size: 1.2rem;
-			line-height: @line-height;
-			text-align: left;
-			h2{
-				font-size: 1.2rem;
-				color:red;
-			}
-		}
-			.right-skills li{
-				.border();
+	@media screen and (max-width:520px){
+		width:100%;
+	}
+}
 
-			}
-}//skills
+	//right side
+	.right-skills{
+		 ul{
+		font-size: @font;
+		line-height: @line-height;
+		text-align: left;
+		margin-bottom: 60px;
+		 }
+		h2{
+			font-size: 2rem;
+		}
+		li{
+			.border();
+			padding:10px;
+
+		}
+	}
+
+.bottom-main {
+	 table {
+	 font-size: 1.6rem
+	  
+	 }
+	 h2{
+		font-size:2rem;
+		color:@text-color;
+		margin-bottom: 20px;
+		@media screen and (max-width:520px){
+			text-align: center;
+			font-size: 1.5rem
+		}
+	}
+	 .table-odd td{
+	background-color:rgb(205, 199, 199);
+	padding:15px;
+	}
+	 .table-even td{
+	 background-color:rgb(230, 230, 230);
+	 padding:15px;
+	}
+	td{
+		@media screen and (max-width:520px){
+			font-size:1.1rem;
+		}
+	}
+	 .table-titles{
+		color:@text-color;
+		margin-left:-200px;
+		margin-top:200px;
+	}
+}//bottom main
+
+footer{
+	.centerFlex();
+	background-color:grey;
+	margin-top: 20px;
+	height:20vh;
+	h2{
+		font-size: 1.2rem;
+		color:#fff;
+
+	}
+}

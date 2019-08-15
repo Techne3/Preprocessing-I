@@ -151,6 +151,11 @@ nav a {
   color: #303030;
   font-size: 1.2rem;
 }
+@media screen and (max-width: 520px) {
+  nav a {
+    margin-right: 20px;
+  }
+}
 header .main-container {
   height: 90%;
   background-color: #d3edf7;
@@ -171,7 +176,7 @@ header .main-container h1 {
 }
 @media screen and (max-width: 800px) {
   header .main-container h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 header .main-container p {
@@ -188,32 +193,102 @@ header .main-container button {
   background-color: grey;
   color: #fff;
 }
+@media screen and (max-width: 520px) {
+  header .main-container button {
+    margin-left: 25%;
+    text-align: center;
+  }
+}
 .skills {
   display: flex;
   justify-content: center;
   align-items: center;
   color: #303030;
 }
+@media screen and (max-width: 520px) {
+  .skills {
+    flex-direction: column;
+    width: 100%;
+  }
+}
 .skills .left-skills,
 .skills .right-skills {
   width: 48%;
 }
-.skills .left-skills h2 {
+@media screen and (max-width: 520px) {
+  .skills .left-skills,
+  .skills .right-skills {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.left-skills h2 {
   font-size: 2rem;
 }
-.skills .left-skills p {
+.left-skills p {
   font-size: 1.2rem;
   line-height: 1.4;
+  margin-right: 20px;
 }
-.skills .right-skills ul {
+@media screen and (max-width: 520px) {
+  .left-skills {
+    width: 100%;
+  }
+}
+.right-skills ul {
   font-size: 1.2rem;
   line-height: 1.4;
   text-align: left;
+  margin-bottom: 60px;
 }
-.skills .right-skills ul h2 {
-  font-size: 1.2rem;
-  color: red;
+.right-skills h2 {
+  font-size: 2rem;
 }
-.skills .right-skills li {
+.right-skills li {
   border: 1px solid #303030;
+  padding: 10px;
+}
+.bottom-main table {
+  font-size: 1.6rem;
+}
+.bottom-main h2 {
+  font-size: 2rem;
+  color: #303030;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 520px) {
+  .bottom-main h2 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+.bottom-main .table-odd td {
+  background-color: #cdc7c7;
+  padding: 15px;
+}
+.bottom-main .table-even td {
+  background-color: #e6e6e6;
+  padding: 15px;
+}
+@media screen and (max-width: 520px) {
+  .bottom-main td {
+    font-size: 1.1rem;
+  }
+}
+.bottom-main .table-titles {
+  color: #303030;
+  margin-left: -200px;
+  margin-top: 200px;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  margin-top: 20px;
+  height: 20vh;
+}
+footer h2 {
+  font-size: 1.2rem;
+  color: #fff;
 }
